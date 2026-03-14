@@ -1,64 +1,54 @@
-Cloud Based Home Service Platform
+# ☁️ Cloud Based Home Service Platform
 
 Cloud Based Home Service Platform is a web application where users can book home services such as electrician, plumber, cleaning, and repair services online. The platform allows users to easily find service providers and schedule appointments.
 
-📌 Project Description
+---
+
+## 📌 Project Description
 
 This project provides an online platform where users can:
 
-Register and login
+- Register and Login
+- Search for Service Providers
+- Book Home Services
+- Manage Bookings
+- Access Admin Dashboard
 
-Search for service providers
+The application is developed using **PHP and MySQL** and can be deployed on cloud servers.
 
-Book home services
+---
 
-Manage bookings
+## 🚀 Technologies Used
 
-The application is developed using PHP and MySQL and deployed on cloud servers.
+### Frontend
+- HTML
+- CSS
+- Bootstrap
+- JavaScript
 
-🚀 Technologies Used
+### Backend
+- PHP
+- MySQL
 
-Frontend
+### Cloud & DevOps Tools
+- Amazon Web Services (EC2)
+- Git
+- GitHub
 
-HTML
+---
 
-CSS
+## ✨ Features
 
-Bootstrap
+- User Registration and Login
+- Service Provider Listing
+- Book Home Services
+- Booking Management
+- Admin Dashboard
+- Cloud Deployment Support
 
-JavaScript
+---
 
-Backend
-
-PHP
-
-MySQL
-
-Cloud & DevOps Tools
-
-Amazon Web Services (EC2)
-
-Docker
-
-GitHub
-
-Git
-
-✨ Features
-
-User Registration and Login
-
-Service Provider Listing
-
-Book Home Services
-
-Booking Management
-
-Admin Dashboard
-
-Cloud Deployment Support
-
-📂 Project Structure
+## 📂 Project Structure
 HSP/
 │
 ├── admin/
@@ -70,84 +60,108 @@ HSP/
 ├── services/
 ├── mainpage.php
 └── index.php
-⚙️ Local Installation (XAMPP)
-Step 1 Install XAMPP
 
-Download and install XAMPP.
+---
 
-Step 2 Move Project Folder
+# ⚙️ Local Installation (XAMPP)
 
+### Step 1: Install XAMPP
+Download and install **XAMPP**.
+
+### Step 2: Move Project Folder
 Copy the project folder to:
-
 D:\xampp\htdocs\HSP
-Step 3 Start Services
 
-Open XAMPP Control Panel and start:
+### Step 3: Start Services
+Open **XAMPP Control Panel** and start:
 
-Apache
+- Apache
+- MySQL
 
-MySQL
+### Step 4: Import Database
 
-Step 4 Import Database
-
-Open browser
-
-Go to
-
+Open browser and go to:
 http://localhost/phpmyadmin
 
-Create database:
+Create a new database: hsp
 
-hsp
+Import the database file: db/hsp.sql
 
-Import file:
-
-db/hsp.sql
-Step 5 Run Project
+### Step 5: Run Project
 
 Open browser and run:
-
 http://localhost/HSP/mainpage.php
-☁️ Cloud Deployment (AWS EC2)
 
-This project can also be deployed on cloud using **Amazon Web Services EC2 instance.
+---
 
-Step 1 Update Server
+# ☁️ Cloud Deployment (AWS EC2)
+
+This project can also be deployed on cloud using **Amazon Web Services EC2 instance**.
+
+### Step 1: Update Server
 sudo apt update
-Step 2 Install Required Packages
+
+### Step 2: Install Required Packages
 sudo apt install apache2 mysql-server php libapache2-mod-php php-mysql git -y
-Step 3 Start Apache Server
+
+### Step 3: Start Apache Server
 sudo systemctl start apache2
-Step 4 Go to Web Directory
+
+### Step 4: Go to Web Directory
 cd /var/www/html
-Step 5 Remove Default Apache Page
+
+### Step 5: Remove Default Apache Page
 sudo rm index.html
-Step 6 Clone Project from GitHub
+
+### Step 6: Clone Project from GitHub
 sudo git clone https://github.com/pratikshalavand98/home-service-platform.git
-Step 7 Copy Project Files
+
+### Step 7: Copy Project Files
 sudo cp -r home-service-platform/* /var/www/html/
-Step 8 Set Folder Permissions
+
+### Step 8: Set Folder Permissions
 sudo chmod -R 755 /var/www/html
 sudo chown -R www-data:www-data /var/www/html
-Step 9 Create Database
+
+### Step 9: Create Database
 sudo mysql
-
 Then run:
-
 CREATE DATABASE hsp;
 EXIT;
-Step 10 Import Database
+
+### Step 10: Import Database
 sudo mysql hsp < /var/www/html/db/hsp.sql
-Step 11 Restart Apache
-sudo systemctl restart apache2
-Step 12 Access Website
+
+**Open the Apache configuration file:**
+
+sudo nano /etc/apache2/mods-enabled/dir.conf
+
+_In this file you will find the following line:_
+
+DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
+
+_Change it to:_
+
+DirectoryIndex mainpage.php index.php index.html index.cgi index.pl index.xhtml index.htm
+
+### Step 11: Restart Apache
+
+### Step 12: Access Website
 
 Open browser and visit:
-
-http://YOUR-EC2-PUBLIC-IP
+http://your-ec2-public-ip/
 
 Your project will now be live on the cloud.
 
-👩‍💻 Author
+---
 
-Pratiksha Lavand
+## 🔐 Security Note
+
+For security reasons, admin credentials are not included in this repository.  
+You can create or update admin credentials directly in the database.
+
+---
+
+## 👩‍💻 Author
+
+**Pratiksha Lavand**
