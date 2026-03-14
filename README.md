@@ -63,7 +63,7 @@ D:\xampp\htdocs\HSP
 4. Import database in phpMyAdmin.
 5. Open browser and run:
 
-http://localhost/HSP
+[http://localhost/HSP](http://localhost/hsP/mainpage.php)
 
 ---
 
